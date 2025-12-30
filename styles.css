@@ -1146,6 +1146,86 @@ body {
     object-fit: contain;
 }
 
+/* Certificate Gallery Styles */
+.certificate-content {
+    max-width: 95%;
+}
+
+.certificates-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.certificate-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    box-shadow: var(--shadow-lg);
+    border: 2px solid rgba(147, 51, 234, 0.3);
+    transition: var(--transition);
+}
+
+.certificate-image:hover {
+    transform: scale(1.02);
+    box-shadow: var(--glow-purple);
+    border-color: var(--prism-purple);
+}
+
+.certificate-pdf-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
+
+.certificate-pdf {
+    background: var(--bg-card);
+    border: 2px solid rgba(147, 51, 234, 0.3);
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.certificate-pdf:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glow-cyan);
+    border-color: var(--prism-cyan);
+}
+
+.certificate-pdf i {
+    font-size: 4rem;
+    color: var(--prism-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.certificate-pdf p {
+    color: var(--text-light);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.certificate-pdf span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

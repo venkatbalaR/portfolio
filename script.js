@@ -299,7 +299,47 @@ document.addEventListener('keydown', (e) => {
         resumeModal.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
     }
+    if (e.key === 'Escape' && certificateModal && certificateModal.classList.contains('active')) {
+        certificateModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
 });
+
+// ===================================
+// Certificate Modal
+// ===================================
+const certificateModal = document.getElementById('certificate-modal');
+const certificateLink = document.getElementById('certificate-link');
+const certificateModalClose = document.querySelector('.certificate-close');
+const certificateModalOverlay = certificateModal ? certificateModal.querySelector('.resume-modal-overlay') : null;
+
+if (certificateLink) {
+    certificateLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (certificateModal) {
+            certificateModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    });
+}
+
+if (certificateModalClose) {
+    certificateModalClose.addEventListener('click', () => {
+        if (certificateModal) {
+            certificateModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+}
+
+if (certificateModalOverlay) {
+    certificateModalOverlay.addEventListener('click', () => {
+        if (certificateModal) {
+            certificateModal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+    });
+}
 
 // ===================================
 // Initialize on DOM Load
